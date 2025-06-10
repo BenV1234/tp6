@@ -4,8 +4,8 @@ import arcade
 from game_state import GameState
 from attack_animation import AttackAnimation, AttackType
 
-SCREEN_WIDTH = 800  # 1200
-SCREEN_HEIGHT = 600  # 800
+SCREEN_WIDTH = 800  
+SCREEN_HEIGHT = 600  
 
 CHOICE_IMAGES = {
    AttackType.ROCK: "assets/srock.png",
