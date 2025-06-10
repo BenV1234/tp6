@@ -119,7 +119,7 @@ class MyGame(arcade.Window):
 
         self.setup()
 
-        # print("__init__",self.game_state, self.attack_chosen, self.player_attack_type)
+        
 
     def setup(self):
         """Initialise les variables du jeu."""
@@ -135,11 +135,11 @@ class MyGame(arcade.Window):
         self.message.font_size = 24
         self.message.text = TEXT_START_NEW_GAME
         self.second_message.text = TEXT_START_GAME
-        #self.game_state_text.text = f"status: {self.game_state}"
+        
 
-        # self.player_score_text.text = f"Le pontage du joueur est {self.player_score}"
+        
         self.player_score_text.text = f"{TEXT_PLAYER_SCORE} {self.player_score}"
-        # self.computer_score_text.text = f"Le pontage de ordinateur est {self.computer_score}"
+       
         self.computer_score_text.text = f"{TEXT_COMPUTER_SCORE} {self.computer_score}"
 
     def on_draw(self):
@@ -158,7 +158,7 @@ class MyGame(arcade.Window):
         self.title_text.draw()
 
         self.status.draw()
-        # self.game_state_text.draw()
+        
 
         # Draw scores
         self.player_score_text.text = f"{TEXT_PLAYER_SCORE} {self.player_score}"
@@ -186,7 +186,7 @@ class MyGame(arcade.Window):
     def on_key_press(self, key, modifiers):
 
         if key == arcade.key.SPACE:
-            # print("on_key_press", self.game_state)
+            
 
             if self.game_state == GameState.NOT_STARTED:
                 self.game_state = GameState.ROUND_ACTIVE
@@ -209,11 +209,11 @@ class MyGame(arcade.Window):
             self.attack_sprites.append(self.scissors)
 
             self.status.text = ""
-            #self.game_state_text.text = f"status: {self.game_state}"
+            
 
     def on_mouse_press(self, x, y, button, modifiers):
         """Manages mouse clicks to choose an attack."""
-        # print(x,y)
+       
         if self.game_state == GameState.ROUND_ACTIVE:
 
             if self.rock.collides_with_point((x, y)):
